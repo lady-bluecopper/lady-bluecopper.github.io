@@ -114,6 +114,24 @@
                     <h1>Publications:</h1>
                     <dl>
                         <dt class="publication" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                            <h3 class="publication-title">MaNIACS: Approximate Mining of Frequent Patterns through Sampling.</h3>
+                            <em>
+                                <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Giulia Preti</span>,
+                                </span>
+                                <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Gianmarco De Francisci Morales</span>,
+                                </span>
+                                <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Matteo Riondato</span>,
+                                </span>
+                            </em>
+                            <br />
+                            <span class="publication-info">KDD, 2021</span>
+                            <br />
+                            <a class="attachment" href="https://dl.acm.org/doi/abs/10.1145/3447548.3467344" title="Download a digital copy" download="s39215">(PDF)</a>
+                        </dt>
+                        <dt class="publication" itemscope itemtype="https://schema.org/ScholarlyArticle">
                             <h3 class="publication-title">Discovering Dense Correlated Subgraphs in Dynamic Networks.</h3>
                             <em>
                                 <span itemprop="author" itemscope itemtype="https://schema.org/Person">
@@ -132,6 +150,7 @@
                             <br />
                             <span class="publication-info">PAKDD, 2021</span>
                             <br />
+                            <a class="attachment" href="https://arxiv.org/abs/2103.00451" title="Download a digital copy" download="s39215">(PDF)</a>
                         </dt>
                         <dt class="publication" itemscope itemtype="https://schema.org/ScholarlyArticle">
                             <h3 class="publication-title">STruD: Truss Decomposition of Simplicial Complexes.</h3>
@@ -149,7 +168,7 @@
                             <br />
                             <span class="publication-info">The Web Conference, 2021</span>
                             <br />
-                            <!-- <a class="attachment" href="https://arxiv.org/abs/2007.03950" title="Download a digital copy" download="s39215">(PDF)</a> -->
+                            <a class="attachment" href="https://dl.acm.org/doi/10.1145/3442381.3450073" title="Download a digital copy" download="s39215">(PDF)</a>
                         </dt>
                         <dt class="publication" itemscope itemtype="https://schema.org/ScholarlyArticle">
                             <h3 class="publication-title">Mining Dense Subgraphs with Similar Edges.</h3>
@@ -243,6 +262,15 @@
                     <h1>Projects and Code:</h1>
                     <dl>
                         <dt class="project">
+                        <h2 class="project-title">MaNIACS</h2>
+                        <h3 class="project-info">Overview</h3>
+                            <p>MaNIACS is a sampling-based randomized algorithm for computing approximations of the collection of the subgraph patterns that are frequent in a single vertex-labeled graph, according to the Minimum Node Image-based (MNI) frequency measure.</p> 
+                            <p>The output of MaNIACS comes with strong probabilistic guarantees. The quality of the approximation is obtained using the empirical Vapnik-Chervonenkis (VC) dimension, a key concept from statistical learning theory. In particular, given a failure probability, a frequency threshold, and a sample size, with at least such probability over the choice of the sample of such size, the output of MaNIACS contains each pattern of size k with relative MNI frequency greater than the threshold and with estimated frequency within epsilon from the relative MNI frequency.</p>
+                            <p> MaNIACS leverages properties of the frequency function to aggressively prune the pattern search space, and thus to reduce the time spent in exploring subspaces containing no frequent patterns. The framework includes both an exact and an approximate mining algorithm. </p>
+                        <h3 class="project-data">Code</h3>
+                            <p>The code of this project is publicly available on <a href="https://github.com/lady-bluecopper/MaNIACS">GitHub</a>.</p>
+                        <dt>
+                        <dt class="project">
                         <h2 class="project-title">STruD</h2>
                         <h3 class="project-info">Overview</h3>
                             <p>STruD is a framework to perform the simplicial truss decomposition of simplicial complexes.
@@ -273,9 +301,7 @@
             <section class="text-box">
                 <address class="h-card">
                     <a class="p-name u-url" href="http://gpreti.disi.unitn.it">Giulia Preti</a>
-                    2018
-                    —
-                    <span class="p-org">University of Trento</span>
+                    2021
                 </address>
             </section>
         </footer>
