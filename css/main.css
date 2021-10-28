@@ -1,0 +1,417 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* MAIN Coolors Exported Palette - coolors.co/6c756b-1e1e24-d0e1d4-c4bbaf-37000a
+
+- HSL
+$color1: hsla(114, 4%, 44%, 1);
+$color2: hsla(240, 9%, 13%, 1);
+$color3: hsla(134, 22%, 85%, 1);
+$color4: hsla(34, 15%, 73%, 1);
+$color5: hsla(349, 100%, 11%, 1);
+
+-  RGB
+$color1: rgba(108, 117, 107, 1);
+$color2: rgba(30, 30, 36, 1);
+$color3: rgba(208, 225, 212, 1);
+$color4: rgba(196, 187, 175, 1);
+$color5: rgba(55, 0, 10, 1);
+*/
+
+/* LIGHT Coolors Exported Palette - coolors.co/868e85-46464b-d8e6db-cec7bd-5b2e36
+
+- HSL
+$color1: hsla(113, 4%, 54%, 1);
+$color2: hsla(240, 3%, 28%, 1);
+$color3: hsla(133, 22%, 87%, 1);
+$color4: hsla(35, 15%, 77%, 1);
+$color5: hsla(349, 33%, 27%, 1);
+
+-  RGB
+$color1: rgba(134, 142, 133, 1);
+$color2: rgba(70, 70, 75, 1);
+$color3: rgba(216, 230, 219, 1);
+$color4: rgba(206, 199, 189, 1);
+$color5: rgba(91, 46, 54, 1);
+
+*/
+
+
+/* Custom Fonts */
+
+h1,h3,h5 {
+  font-family: 'PT Serif', "Times New Roman", Times serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-style: italic;
+}
+
+html, body, h2,h4,h6 {
+  font-family: 'PT Sans', sans-serif;
+}
+
+h2,h4,h6 {
+  font-weight: bold;
+}
+
+
+/*
+When setting the primary font stack, apply it to the Pure grid units along
+with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
+specific font stacks to ensure the greatest OS/browser compatibility.
+*/
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+
+  /* Set your content font stack here: */
+  font-family: 'PT Sans', Helvetica, Verdana, sans-serif;
+}
+
+
+.pure-g > * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.pure-menu-fixed {
+  z-index: 999;
+}
+
+
+html, body {
+    background-color: rgba(208, 225, 212, 1);
+}
+
+.home-menu {
+    background-color: rgba(30, 30, 36, 1); /* $color2: */
+    text-align: center;
+}
+
+.home-menu .responsive-menu-heading {
+  display: block;
+  color: rgba(208, 225, 212, 1);
+}
+
+.home-menu .pure-menu-link {
+    border-bottom: 2px solid rgba(30, 30, 36, 1); /* color2 */
+}
+
+.home-menu .pure-menu-link:hover {
+    background-color: transparent;
+    border-bottom: 2px solid rgba(208, 225, 212, 1); /* color3 */
+}
+
+.home-menu .pure-menu-selected .pure-menu-link {
+    color: rgba(208, 225, 212, 1); /* color3 */
+}
+
+.hero {
+  min-height: 10em;
+  padding: 2em;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  background-color: rgba(91, 46, 54, 1); /* $color5 light: */
+}
+
+.hero .big-name {
+  font-size: 2.5em;
+  margin-top: 4em;
+  color:  rgba(196, 187, 175, 1); /* color4 */
+}
+
+.hero .big-text{
+    margin-top: 0em;
+    font-size: 1.25em;
+    color :  rgba(208, 225, 212, 1); /* $color5 */
+    font-weight: normal;
+}
+
+.hero .big-name,
+.hero .big-text,
+.hero .text-box {
+  z-index: 10;
+  position: relative;
+}
+
+.hero .text-box {
+    color :  rgba(208, 225, 212, 1); /* $color5 */
+    font-size: 1.25em;
+}
+
+
+#hero-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  z-index: 0;
+}
+
+#hero-image svg {
+  margin-top: 4em;
+  opacity: 0.6;
+}
+#hero-image svg path {
+  fill: hsla(349, 100%, 11%, 0.3);
+  stroke-opacity:0.5;
+}
+
+#hero-image svg .big-nodes{
+
+  animation: color 4s 2s infinite alternate;
+}
+
+#hero-image svg .small-nodes{
+
+  animation: color 5s 1s infinite alternate;
+}
+
+#hero-image svg .edges{
+  animation: color 4s 0s infinite alternate;
+}
+
+#linkedin-icon-bg {
+  color: #0077b5;
+  font-size: 2.5em;
+}
+
+#twitter-icon-bg {
+  color: #00aced;
+  font-size: 2.5em;
+}
+
+#github-icon-bg {
+  color: #000000;
+  font-size: 2.5em;
+}
+
+@keyframes color {
+  0% {
+    fill: hsla(240, 9%, 13%, 0.4);
+  }
+  50% {
+    fill: hsla(349, 100%, 11%, 0.6);
+  }
+  100% {
+    fill: hsla(264, 74%, 24%, 0.55);
+  }
+}
+
+
+.sidebar {
+    padding: 2em;
+    text-align: center;
+}
+
+
+.picture {
+    margin: 0 auto;
+}
+.picture img {
+    max-width: 10em;
+    margin: 0 auto;
+}
+
+.text-box {
+    padding: 2em;
+}
+
+
+.home-footer {
+    background-color: rgba(30, 30, 36, 1); /* $color2: */
+    text-align: center;
+}
+
+.home-footer .text-box {
+  display: block;
+  color: rgba(208, 225, 212, 1);
+  font-size: 0.85em;
+}
+
+.home-footer .text-box a {
+  color: rgba(208, 225, 212, 1);
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 30em) { /* ~ 480px */
+
+/* ====================
+  INTERMEDIATE: Menu
+   ==================== */
+  .home-menu .responsive-menu-heading {
+    display: inline-block;
+  }
+
+
+/* ========================
+  INTERMEDIATE: IE Fixes
+   ======================== */
+
+
+}
+
+@media only screen and (min-width: 48em) { /* 768 px */
+
+/* ====================
+  WIDE: CSS3 Effects
+   ==================== */
+
+/* ============
+  WIDE: Menu
+   ============ */
+
+
+/* ============
+  WIDE: Header
+   ============ */
+  .hero{
+    min-height: 100vh;
+  }
+
+  .hero .big-name {
+    font-size: 4em;
+    margin-top: 4em;
+    margin-top: 35vh;
+  }
+  .hero .big-text{
+    margin-top: -1.5em;
+    font-size: 2em;
+  }
+
+ /* ============
+  WIDE: Main
+   ============ */
+
+}
+
+@media only screen and (min-width: 72em) { /* ~ 1140px */
+
+/* ===============
+  Maximal Width
+   =============== */
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
