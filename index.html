@@ -49,7 +49,7 @@
         <aside class="sidebar pure-u-1 pure-u-md-2-5" itemscope itemtype="https://schema.org/Person">
             <article id="about-me" class="pure-g">
                 <figure class="picture pure-u-1">
-                    <img class="pure-img" itemprop="image" src="img/PXL_20230816.jpg" alt="Seceda2023">
+                    <img class="pure-img" itemprop="image" src="img/Beaulard2023.jpg" alt="Beaulard2023">
                 </figure>
                 <section class="info pure-u-1">
                     <address>
@@ -72,7 +72,7 @@
                             </div>
                             <div class="pure-u-1-6">
                                 <a href="https://twitter.com/ail_eni">
-                                    <span id="twitter-icon-bg"><i class="fab fa-twitter-square"></i></span>
+                                    <span id="twitter-icon-bg"><i class="fa-brands fa-square-x-twitter"></i></span>
                                 </a>
                             </div> 
                             <div class="pure-u-1-6">
@@ -107,14 +107,14 @@
 		    from biology to social networks, and from computer networks to smart cities. 
 		    In particular, I consider <strong>weighted graphs</strong> and <strong>dynamic graphs</strong>.</p>
                 <p> Weighted graphs are graphs whose nodes and edges are labeled with weights indicating their relevance or quality. 
-		    Moreover, in applications aiming at offering personalized products and services to each individual user rather than 
+		    Moreover, in applications aiming at offering personalized products and services to each user rather than 
 		    ``one size fits all'' solutions, each element of the graph naturally carries multiple weights, one for each user.
                     My goal is to identify structures that appear frequently in the graph and whose appearances are characterized by large weights, 
 		    and hence are relevant for the user, under the assumption that larger weights indicate higher interest.</p>
                 <p> Dynamic graphs are graphs that change over time, meaning that their nodes and edges can undergo both structural and attribute changes. 
 		    They are generally modeled as sequences of static graphs called snapshots. In this context, I am interested in detecting groups of edges 
-		    that evolve in a convergent manner, meaning that they display a positive correlation on their behavior. 
-		    These groups of correlated edges, especially when they involve edges that are topologically close, can represent regions of interest 
+		    that evolve in a convergent manner, meaning that they display a positive correlation in their behavior. 
+		    These groups of correlated edges, especially when they involve topologically close edges, can represent regions of interest 
 		    in the network.</p>
                 <p> More recently, I started investigating pattern mining techniques and null models for complex networks such as hypergraphs and 
 		    simplicial complexes, which are higher-order generalizations of graphs able to model <i>k-ary</i> relations among entities. 
@@ -122,7 +122,7 @@
                     Conversely, a simplicial complex is a collection of polytopes such as triangles and tetrahedra, which are called <i>simplices</i>.</p> 
 		<p> During my PhD studies, I also worked on entity resolution in highly heterogeneous and temporal databases, 
 		    defined as collections of records characterized by different schemata and timestamps indicating the date of creation. 
-		    The reconciliation of the records in this kind of situation, requires specialized similarity functions that take into 
+		    The reconciliation of the records in this kind of situation requires specialized similarity functions that take into 
 		    consideration both the heterogeneity and the dynamism of the data. 
 		    In my work, I proposed a suitable time-aware schema-agnostic similarity measure and a framework that uses this measure to 
 		    identify maximal groups of similar temporal records.</p>
@@ -132,6 +132,24 @@
                 <section class="text-box" id="publications">
                     <h1>Publications:</h1>
                     <dl>
+			<dt class="publication" itemscope itemtype="https://schema.org/ScholarlyArticle">
+                            <h3 class="publication-title">Hyper-distance Oracles in Hypergraphs.</h3>
+                            <em>
+                                <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Giulia Preti</span>,
+                                </span>
+                                <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Gianmarco De Francisci Morales</span>,
+                                </span>
+                                <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Francesco Bonchi</span>,
+                                </span>
+                            </em>
+                            <br />
+                            <span class="publication-info">The VLDB Journal, 2023</span>
+                            <br />
+			    <a class="attachment" href="https://doi.org/10.1145/3587254">10.1145/3587254</a>
+                        </dt>
 			<dt class="publication" itemscope itemtype="https://schema.org/ScholarlyArticle">
                             <h3 class="publication-title">MaNIACS: Approximate Mining of Frequent Patterns through Sampling.</h3>
                             <em>
@@ -335,6 +353,14 @@
                     <h1>Projects and Code:</h1>
                     <dl>
 			<dt class="project">
+                        <h2 class="project-title">HypED</h2>
+                        <h3 class="project-info">Overview</h3>
+			    <p> HypED is an algorithm to answer point-to-point s-distance queries in hypergraphs, approximately. The algorithm can answer three types of queries: vertex-to-hyperedge, vertex-to-vertex, and hyperedge-to-hyperedge. This is achieved by constructing a distance oracle, which can be stored on disk for future usage.</p>
+			    <p> The distance oracle stores distances from landmark hyperedges to reachable hyperedges, so that the distance between two hyperedges can be approximated via triangle inequalities. The algorithm requires in input an integer <i>L</i> used to compute the desired oracle size <i>O = L x |E|</i>, where <i>|E|</i> is the number of hyperedges in the hypergraph.</p>
+			<h3 class="project-data">Code</h3>
+    			<p>The code of this project is publicly available on <a href="https://github.com/lady-bluecopper/HypED">GitHub</a>.</p>
+                        <dt>
+			<dt class="project">
                         <h2 class="project-title">ALICE</h2>
                         <h3 class="project-info">Overview</h3>
                             <p>ALICE is a suite of two Markov-Chain Monte-Carlo algorithms for sampling datasets from our novel null model, based on a carefully defined set of states and efficient operations to move between them.</p>
@@ -347,7 +373,7 @@
                         <h2 class="project-title">FreSCo</h2>
                         <h3 class="project-info">Overview</h3>
                             <p>FreSCo is an algorithm to find frequent patterns in simplicial complexes. A pattern, or <i>simplet</i> is defined as a subcomplex, and its frequency is determined by its occurrences in the complex.</p> 
-                            <p>The algorithm generalizes the Minimum Node Image-based (MNI) frequency measure to the complex setting, and then returns the set of patterns whose frequency is greater than a given threshold.</p>
+                            <p>The algorithm generalizes the Minimum Node Image-based (MNI) frequency measure to the complex setting and then returns the set of patterns whose frequency is greater than a given threshold.</p>
                         <h3 class="project-data">Code</h3>
                             <p>The code of this project is publicly available on <a href="https://github.com/lady-bluecopper/FreSCo">GitHub</a>.</p>
                         <dt>
@@ -365,15 +391,15 @@
                         <h3 class="project-info">Overview</h3>
                             <p>STruD is a framework to perform the simplicial truss decomposition of simplicial complexes.
                             A simplicial complex is a generalization of a graph: a collection of <i>n</i>-ary relationships (instead of binary as the edges of a graph), named simplices.
-                            <p>STruD generalizes the graph notion of truss decomposition to complexes, and includes algorithms to find <b>(i)</b> the simplicial truss decomposition of a simplicial complex, <b>(ii)</b> the top-<i>n</i> simplices with maximum trussness, <b>(iii)</b> the <i>k</i>-truss of simplices of size greater or equal to a given <i>q</i>, and <b>(iv)</b> the standard truss decomposition of the 1-skeleton of a simplicial complex.</p>
+                            <p>STruD generalizes the graph notion of truss decomposition to complexes and includes algorithms to find <b>(i)</b> the simplicial truss decomposition of a simplicial complex, <b>(ii)</b> the top-<i>n</i> simplices with maximum trussness, <b>(iii)</b> the <i>k</i>-truss of simplices of size greater or equal to a given <i>q</i>, and <b>(iv)</b> the standard truss decomposition of the 1-skeleton of a simplicial complex.</p>
                         <h3 class="project-data">Code</h3>
                             <p>The code of this project is publicly available on <a href="https://github.com/lady-bluecopper/STruD">GitHub</a>.</p>
                         <dt>
                         <dt class="project">
                         <h2 class="project-title">ReSuM</h2>
                         <h3 class="project-info">Overview</h3>
-                            <p>ReSuM is a framework to mine relevant patterns from large weighted and multi-weighted graphs. Assuming that the importance of a pattern is determined not only by its frequency in the graph, but also by the edge weights of its appearances, we propose four scoring functions to compute the relevance of the patterns. These functions satisfy the apriori property, and thus can rely on efficient pruning strategies.</p>
-                            <p>The framework includes an exact and an approximate mining algorithm. The first is characterized by intelligent storage and computation of the pattern scores, while the second is based on the aggregation of similar weighting functions to allow scalability and avoid redundant computations.</p>
+                            <p>ReSuM is a framework to mine relevant patterns from large-weight and multi-weighted graphs. Assuming that the importance of a pattern is determined not only by its frequency in the graph, but also by the edge weights of its appearances, we propose four scoring functions to compute the relevance of the patterns. These functions satisfy the apriori property, and thus can rely on efficient pruning strategies.</p>
+                            <p>The framework includes an exact and approximate mining algorithm. The first is characterized by intelligent storage and computation of the pattern scores, while the second is based on the aggregation of similar weighting functions to allow scalability and avoid redundant computations.</p>
                         <h3 class="project-data">Code</h3>
                             <p>The code of this project is publicly available on <a href="https://github.com/lady-bluecopper/ReSuM">GitHub</a>, while the datasets used in the experiments may be provided upon request.</p>
                         <dt>
